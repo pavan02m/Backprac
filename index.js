@@ -11,14 +11,14 @@ const app = express();
 dotenv.config();
 mongoose.set('strictQuery', false);
 
-const connect = async() => {
-    try {
-        await mongoose.connect(process.env.MONGO_URL_OFF);
-        console.log("DB Connected successfully");
-    } catch (error) {
-        console.log(error);
-    }
-}
+// const connect = async() => {
+//     try {
+//         await mongoose.connect(process.env.MONGO_URL_OFF);
+//         console.log("DB Connected successfully");
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 app.use(express.json());
 app.use(cookieParser());
