@@ -29,7 +29,7 @@ export const login = async (req, res, next) => {
     if (!isCorrectPassword) return next(createError(404, "User not found"));
     const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
-      process.env.JWT_SECRET
+      "gauripagalhai"
     );
     const { password, isAdmin, ...otherDetails } = user._doc;
     res
