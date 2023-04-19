@@ -39,7 +39,8 @@ app.get("/",(req,res)=>{
     res.json("hello")
 })
 
-app.listen(8080,()=>{
-    connect();
-    console.log("server is listening to port 8080");
-});
+module.exports = app
+// app.listen(8080,()=>{
+//     connect();
+//     console.log("server is listening to port 8080");
+// });
